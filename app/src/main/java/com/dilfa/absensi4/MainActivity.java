@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case 1 :
                                 SQLiteDatabase db = dbcenter.getWritableDatabase();
-                                db.execSQL("delete from biodata where nama = '"+selection+"'");
+                                db.execSQL("delete from absensi where nama = '"+selection+"'");
                                 RefreshList();
                                 break;
                         }
