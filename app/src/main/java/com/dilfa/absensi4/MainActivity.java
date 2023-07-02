@@ -53,34 +53,34 @@ public class MainActivity extends AppCompatActivity {
         ListView01 = (ListView)findViewById(R.id.listView1);
         ListView01.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1, daftar));
         ListView01.setSelected(true);
-        ListView01.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
-                final String selection = daftar[arg2]; //.getItemAtPosition(arg2).toString();
-                final CharSequence[] dialogitem = {"Lihat Absensi", "Hapus Absensi"};
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Pilihan");
-                builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int item) {
-                        switch(item){
-                            case 0 :
-                                Intent i = new Intent(getApplicationContext(), LihatAbsensi.class);
-                                i.putExtra("nama", selection);
-                                startActivity(i);
-                                break;
-                            case 1 :
-                                SQLiteDatabase db = dbcenter.getWritableDatabase();
-                                db.execSQL("delete from absensi where nama = '"+selection+"'");
-                                RefreshList();
-                                break;
-                        }
-                    }
-                });
-                builder.create().show();
-            }});
-        ((ArrayAdapter)ListView01.getAdapter()).notifyDataSetInvalidated();
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        return true;
-    }
-}
+//        ListView01.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            public void onItemClick(AdapterView arg0, View arg1, int arg2, long arg3) {
+//                final String selection = daftar[arg2]; //.getItemAtPosition(arg2).toString();
+//                final CharSequence[] dialogitem = {"Lihat Absensi", "Hapus Absensi"};
+//                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//                builder.setTitle("Pilihan");
+//                builder.setItems(dialogitem, new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int item) {
+//                        switch(item){
+//                            case 0 :
+//                                Intent i = new Intent(getApplicationContext(), LihatAbsensi.class);
+//                                i.putExtra("nama", selection);
+//                                startActivity(i);
+//                                break;
+//                            case 1 :
+//                                SQLiteDatabase db = dbcenter.getWritableDatabase();
+//                                db.execSQL("delete from absensi where nama = '"+selection+"'");
+//                                RefreshList();
+//                                break;
+//                        }
+//                    }
+//                });
+//                builder.create().show();
+//            }});
+//        ((ArrayAdapter)ListView01.getAdapter()).notifyDataSetInvalidated();
+//    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        return true;
+//    }
+}}
