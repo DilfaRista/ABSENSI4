@@ -12,7 +12,8 @@
     android:layout_height="wrap_content"
     android:layout_alignParentTop="true"
     style="?android:attr/borderlessButtonStyle"
-    android:text="Absensi" />
+    android:text="Absensi"
+        android:textColor="#212121"/>
 
     <ListView
         android:id="@+id/listView1"
