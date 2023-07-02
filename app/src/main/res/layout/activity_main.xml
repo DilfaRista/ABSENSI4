@@ -15,11 +15,25 @@
     android:text="Absensi"
         android:textColor="#212121"/>
 
-    <ListView
-        android:id="@+id/listView1"
+
+    <TextView
+        android:id="@+id/judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2" android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="Absensi Hari ini"
+        android:textStyle="bold"
+        android:textColor="#212121"/>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:background="@color/purple_200"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/judul" android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
     </ListView>
 
