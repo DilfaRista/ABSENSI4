@@ -27,7 +27,7 @@ public class LihatAbsensi extends AppCompatActivity {
         text4 = (TextView) findViewById(R.id.textView4);
         text5 = (TextView) findViewById(R.id.textView5);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-                cursor = db.rawQuery("SELECT * FROM biodata WHERE nama = '" +
+                cursor = db.rawQuery("SELECT * FROM absensi WHERE nama = '" +
                 getIntent().getStringExtra("nama") + "'",null);
         cursor.moveToFirst();
         if (cursor.getCount()>0)

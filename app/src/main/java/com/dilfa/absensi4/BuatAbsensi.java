@@ -33,7 +33,7 @@ public class BuatAbsensi extends AppCompatActivity {
             public void onClick(View arg0) {
 // TODO Auto-generated method stub
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.execSQL("insert into biodata(nim, nama) values('" +
+                db.execSQL("insert into absensi (nim, nama) values('" +
                         text1.getText().toString() + "','" +
                         text2.getText().toString() + "')");
                 Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_LONG).show();
