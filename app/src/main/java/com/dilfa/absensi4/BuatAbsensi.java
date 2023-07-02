@@ -26,9 +26,6 @@ public class BuatAbsensi extends AppCompatActivity {
         dbHelper = new DataHelper(this);
         text1 = (EditText) findViewById(R.id.editText1);
         text2 = (EditText) findViewById(R.id.editText2);
-        text3 = (EditText) findViewById(R.id.editText3);
-        text4 = (EditText) findViewById(R.id.editText4);
-        text5 = (EditText) findViewById(R.id.editText5);
         ton1 = (Button) findViewById(R.id.button1);
         ton2 = (Button) findViewById(R.id.button2);
         ton1.setOnClickListener(new View.OnClickListener() {
@@ -36,12 +33,9 @@ public class BuatAbsensi extends AppCompatActivity {
             public void onClick(View arg0) {
 // TODO Auto-generated method stub
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.execSQL("insert into biodata(no, nama, tgl, jk, alamat) values('" +
+                db.execSQL("insert into biodata(nim, nama) values('" +
                         text1.getText().toString() + "','" +
-                        text2.getText().toString() + "','" +
-                        text3.getText().toString() + "','" +
-                        text4.getText().toString() + "','" +
-                        text5.getText().toString() + "')");
+                        text2.getText().toString() + "')");
                 Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_LONG).show();
                 MainActivity.ma.RefreshList();
                 finish();
